@@ -1,7 +1,7 @@
 public class MyArrays{
   public static void main(String[] args){
     int[] arr = {1, 2, 3, 4, 5};
-    System.out.println("Is the original array " + arrayToString(arr) + " the same as " + arrayToString(returnCopy(arr)) + arr == returnCopy(arr));
+    System.out.println("Is the original array " + arrayToString(arr) + " the same as " + arrayToString(returnCopy(arr)) + (arr == returnCopy(arr)));
     System.out.println("Do the values match?" + (arrayToString(arr).equals(arrayToString(returnCopy(arr)))));
   }
 
