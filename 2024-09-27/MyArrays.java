@@ -30,5 +30,15 @@ public class MyArrays{
   }
 
 
+  public static int[] concatArray(int[]ary1,int[]ary2){
+    int[] combinedArray = new int[ary1.length + ary2.length];
+    for (int i = 0; i < ary1.length; i++){
+      combinedArray[i] = ary1[i];
+    }
+    for (int i = 0; i < ary2.length; i++){
+      combinedArray[i + ary1.length] = ary2[i];
+    }
+    return combinedArray;
+  }
 
 }
