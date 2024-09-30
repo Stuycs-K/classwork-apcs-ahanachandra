@@ -5,7 +5,7 @@ public class MyArrays{
     System.out.println("Do the values match?" + (arrayToString(arr).equals(arrayToString(returnCopy(arr)))));
 
     int[] secondArr = {8, 2, 3};
-    System.out.println("Should return " + arrayToString(arr) + " + " + arrayToString(secondArr) + " returned: " + concatArray(arr, secondArr));
+    System.out.println("Should return " + arrayToString(arr) + " + " + arrayToString(secondArr) + " returned: " + arrayToString(concatArray(arr, secondArr)));
 
   }
 
