@@ -8,7 +8,7 @@ public class ArrayMethods{
     System.out.println(arrToString(otherArray));
     System.out.println(arrToString(testArray));
     System.out.println(arr2DSum(testArray));
-    System.out.println(swapRC(rectangularArray));
+    System.out.println(arrToString(swapRC(rectangularArray)));
 
   }
   public static String arrToString(int[] ary){
