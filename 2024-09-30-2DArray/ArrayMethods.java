@@ -6,6 +6,7 @@ public class ArrayMethods{
     int[] otherArray = {2, 5, 3, 66};
     System.out.println(arrToString(otherArray));
     System.out.println(arrToString(testArray));
+    System.out.println(arr2DSum(testArray));
 
   }
   public static String arrToString(int[] ary){
@@ -28,4 +29,18 @@ public class ArrayMethods{
     }
     return newString + "]";
   }
+
+  public static int arr2DSum(int[][] nums){
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++){
+      for (int x = 0; x < nums[i].length; x++){
+        sum += nums[i][x];
+      }
+    }
+    return sum;
+  }
+
+
+
+
 }
