@@ -26,6 +26,6 @@ public class ArrayMethods{
         newString += ", ";
       }
     }
-    return result + "]";
+    return newString + "]";
   }
 }
