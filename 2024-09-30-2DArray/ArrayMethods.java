@@ -19,6 +19,13 @@ public class ArrayMethods{
     return result + "]";
   }
   public static String arrToString(int[][] ary) {
-
+    String newString = "[";
+    for (int i = 0; i < ary.length; i++){
+      newString += arrToString(ary[1]);
+      if (i < ary.length - 1){
+        newString += ", ";
+      }
+    }
+    return result + "]";
   }
 }
