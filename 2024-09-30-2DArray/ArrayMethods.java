@@ -21,7 +21,7 @@ public class ArrayMethods{
   public static String arrToString(int[][] ary) {
     String newString = "[";
     for (int i = 0; i < ary.length; i++){
-      newString += arrToString(ary[1]);
+      newString += arrToString(ary[i]);
       if (i < ary.length - 1){
         newString += ", ";
       }
