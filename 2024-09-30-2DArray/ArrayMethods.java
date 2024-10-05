@@ -9,7 +9,8 @@ public class ArrayMethods{
     System.out.println(arrToString(testArray));
     System.out.println(arr2DSum(testArray));
     System.out.println(arrToString(swapRC(rectangularArray)));
-    replaceNegative(testArray);
+    int[][] anotherTestArray = {{-3, -8, 2}, {}, {71, -4, -3, -6}, {22, 9}};
+    replaceNegative(anotherTestArray);
     replaceNegative(rectangularArray);
     System.out.println(arrToString(testArray));
     System.out.println(arrToString(rectangularArray));
