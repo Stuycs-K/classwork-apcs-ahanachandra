@@ -9,6 +9,10 @@ public class ArrayMethods{
     System.out.println(arrToString(testArray));
     System.out.println(arr2DSum(testArray));
     System.out.println(arrToString(swapRC(rectangularArray)));
+    replaceNegative(testArray);
+    replaceNegative(rectangularArray);
+    System.out.println(testArray);
+    System.out.println(rectangularArray);
 
   }
   public static String arrToString(int[] ary){
@@ -59,17 +63,17 @@ public class ArrayMethods{
   public static void replaceNegative(int[][] vals){
     for (int i = 0; i < vals.length; i++){
       for (int x = 0; x < vals[i].length; x++){
-        if (vals[i][x] < 0 && i == x){
-          vals[i][x] = 1;
-        }
-        else{
-          if (vals[i][x] < 0){
+        if (vals[i][x] < 0){
+          if (i == x){
+            vals[i][x] = 1;
+          }
+          else{
             vals[i][x] = 0;
           }
-        }
       }
     }
   }
+}
 
   //4. Make a copy of the given 2d array.
   //When testing : make sure that changing the original does NOT change the copy.
