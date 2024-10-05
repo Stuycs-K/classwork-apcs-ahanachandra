@@ -11,8 +11,8 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(rectangularArray)));
     replaceNegative(testArray);
     replaceNegative(rectangularArray);
-    System.out.println(testArray);
-    System.out.println(rectangularArray);
+    System.out.println(arrToString(testArray));
+    System.out.println(arrToString(rectangularArray));
 
   }
   public static String arrToString(int[] ary){
