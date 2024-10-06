@@ -14,6 +14,10 @@ public class ArrayMethods{
     replaceNegative(rectangularArray);
     System.out.println(arrToString(anotherTestArray));
     System.out.println(arrToString(rectangularArray));
+    int[][] copythisarray = copy(testArray);
+    System.out.println(arrToString(copythisarray));
+    testArray[0][0] = 54;
+    System.out.println(arrToString(copythisarray));
 
   }
   public static String arrToString(int[] ary){
@@ -81,8 +85,25 @@ public class ArrayMethods{
   //DO NOT use any built in methods that "copy" an array.
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
+  
+  public static int[] helperCopy(int[] arya){
+    int[] helperCopyArr = new int[arya.length];
+    if (arya.length == 0){
+      return new int[0];
+    }
+    for (int i = 0; i < arya.length; i++){
+      helperCopyArr[i] = arya[i];
+    }
+    return helperCopyArr;
+  }
+
+
   public static int[][] copy(int[][] nums){
-    return null;//placeholder so it compiles
+    int[][] resultarry = new int[nums.length][];
+    for (int i = 0; i < nums.length; i++){
+      resultarry[i] = helperCopy(nums[i]);
+    }
+    return resultarry;
   }
 
 
