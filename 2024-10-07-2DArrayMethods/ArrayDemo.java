@@ -12,6 +12,8 @@ public class ArrayDemo{
     System.out.println(countZeros2D(rectangularArray));
     System.out.println(arrToString(otherArray));
     System.out.println(Arrays.toString(otherArray));
+    System.out.println(htmlTable(testArray));
+    System.out.println(htmlTable(rectangularArray));
 
 
   }
@@ -133,6 +135,15 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    return "";
+    String theTable = "<table>";
+    for (int i = 0; i < nums.length; i++){
+      theTable += "<tr>";
+      for (int x = 0; x < nums[i].length; x++){
+        theTable += "<td>" + nums[i][x] + "</td>";
+      }
+      theTable += "</tr>";
+    }
+    theTable += "</table>";
+    return theTable;
   }
 }
