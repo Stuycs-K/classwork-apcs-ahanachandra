@@ -43,7 +43,13 @@ public class ArrayDemo{
   /*Return the sum of all of the values in the 2D array
    *Use a nested loop instead of a helper method*/
   public static int arr2DSum(int[][]nums){
-    return 0;
+    int sum = 0;
+    for (int i = 0; i < nums.length; i++){
+      for (int x = 0; x < nums[i].length; x++){
+        sum += nums[i][x];
+      }
+    }
+    return sum;
   }
 
   //3. Modify a given 2D array of integer as follows:
@@ -52,7 +58,30 @@ public class ArrayDemo{
   //that negative with the value 1
   //-All other negatives replace with 0
   public static void replaceNegative(int[][] vals){
+    for (int i = 0; i < vals.length; i++){
+      for (int x = 0; x < vals[i].length; x++){
+        if (vals[i][x] < 0){
+          if (i == x){
+            vals[i][x] = 1;
+          }
+          else{
+            vals[i][x] = 0;
+          }
+      }
+    }
+  }
 
+  }
+
+  public static int[] helperCopy(int[] arya){
+    int[] helperCopyArr = new int[arya.length];
+    if (arya.length == 0){
+      return new int[0];
+    }
+    for (int i = 0; i < arya.length; i++){
+      helperCopyArr[i] = arya[i];
+    }
+    return helperCopyArr;
   }
 
   //4. Make a copy of the given 2d array.
@@ -61,14 +90,24 @@ public class ArrayDemo{
   //You SHOULD write a helper method for this.
   //If you don't see a good way to do that, you should stop and look at prior methods.
   public static int[][] copy(int[][] nums){
-    return new int[1][1];
+    int[][] resultarry = new int[nums.length][];
+    for (int i = 0; i < nums.length; i++){
+      resultarry[i] = helperCopy(nums[i]);
+    }
+    return resultarry;
   }
 
   //5. Rotate an array by returning a new array with the rows and columns swapped.
   //   You may assume the array is rectangular and neither rows nor cols is 0.
   //   e.g. swapRC({{1,2,3},{4,5,6}}) returns {{1,4},{2,5},{3,6}}
   public static int[][] swapRC(int[][]nums){
-    return new int[1][1];
+    int[][] returnedArr = new int[nums[0].length][nums.length];
+    for (int i = 0; i < nums.length; i++){
+      for (int x = 0; x < nums[0].length; x++){
+        returnedArr[x][i] = nums[i][x];
+      }
+    }
+    return returnedArr;
   }
 
   //6. Make an HTML table by putting a table tag around the entire 2d array,
