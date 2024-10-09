@@ -7,10 +7,11 @@ public class ArrayDemo{
     //do not use any other Arrays.method()
     int[][] testArray = {{3, -8, 0}, {}, {0, 4, -3, 6}, {22, 9}};
     int[][] rectangularArray = {{4, 2, 89, 2}, {3, 12, 17, 3,}, {1, 2, 3, 4}};
+    int[] otherArray = {2, 5, 3, 66};
     System.out.println(countZeros2D(testArray));
     System.out.println(countZeros2D(rectangularArray));
-    System.out.println(arrToString(rectangularArray));
-    System.out.println(Arrays.toString(rectangularArray));
+    System.out.println(arrToString(otherArray));
+    System.out.println(Arrays.toString(otherArray));
 
 
   }
