@@ -20,5 +20,18 @@ public class Demo{
     System.out.println( distance(p1,p2));
     System.out.println( Point.distance(p1,p2));
     System.out.println( p1.distanceTo(p2));
+
+    Point numberOne = new Point(0,0);
+    Point numberTwo = new Point(1,0);
+    Point numberThree = new Point(0.5, Math.sqrt(3)/2);
+  
+    System.out.println(distance(numberOne, numberTwo));
+    System.out.println(distance(numberTwo, numberThree));
+    System.out.println(distance(numberOne, numberThree));
+
   }
+
+
+
+
 }
