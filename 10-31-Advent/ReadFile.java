@@ -1,3 +1,5 @@
+// Group members: Ahana Chandra, Alexander Chen
+
 //1 you need all three imports.
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -11,7 +13,7 @@ public class ReadFile {
       File file = new File("ReadFile.java");//1
       Scanner input = new Scanner(file);
       //CODE THAT SCANS THE FILE.
-      input.close();//releases the file from your program
+      //input.close();//releases the file from your program
       System.out.println("Works");
 
     } catch (FileNotFoundException ex) {
@@ -21,6 +23,16 @@ public class ReadFile {
     }
 
     //Printing every other line of text:
-
+    int counter = 0;
+    //note to self: fix error where it won't compile later.
+    while(input.hasNextLine()){
+      if(counter == 0){
+        counter++;
+        System.out.println(input.nextLine());
+      }
+      else if(counter == 1){
+        counter = 0;
+      }
+    }
   }
 }
