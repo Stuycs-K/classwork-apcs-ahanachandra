@@ -27,6 +27,20 @@ public class ReadFile {
           input.nextLine();
         }
       }
+      System.out.println("\n");
+      Scanner input2 = new Scanner(file);
+
+
+      while(input2.hasNextLine()){
+        String nextline = input2.nextLine();
+        if (nextline.indexOf("{") != -1){
+          System.out.println(nextline);
+        }
+      }
+
+
+
+
     } catch (FileNotFoundException ex) {
       //File not found what should you do?
       System.out.println("File not found");
