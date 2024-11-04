@@ -15,24 +15,23 @@ public class ReadFile {
       //CODE THAT SCANS THE FILE.
       //input.close();//releases the file from your program
       System.out.println("Works");
-
+      //Printing every other line of text:
+      int counter = 0;
+      while(input.hasNextLine()){
+        if(counter == 0){
+          counter++;
+          System.out.println(input.nextLine());
+        }
+        else if(counter == 1){
+          counter = 0;
+          input.nextLine();
+        }
+      }
     } catch (FileNotFoundException ex) {
       //File not found what should you do?
       System.out.println("File not found");
       return; //you can return from a void function just don't put a value.
     }
 
-    //Printing every other line of text:
-    int counter = 0;
-    //note to self: fix error where it won't compile later.
-    while(input.hasNextLine()){
-      if(counter == 0){
-        counter++;
-        System.out.println(input.nextLine());
-      }
-      else if(counter == 1){
-        counter = 0;
-      }
-    }
   }
 }
