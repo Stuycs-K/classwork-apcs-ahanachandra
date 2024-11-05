@@ -14,25 +14,21 @@ public class TriangleTester{
         return ((side1 + side2) > side3 && (side2 + side3) > side1 && (side1 + side3) > side2);
     }
     public static int countTrianglesA(String filename){
-        
+        int sum = 0;
+        try{
+            File file2 = new File(filename);
+            Scanner input0 = new Scanner(file2);
+            while(input0.hasNextLine()){
+                if (isTriangle(input0.nextLine())){
+                    sum++;
+                }
+                }
+            input0.close();
+            }
+            catch (FileNotFoundException ex) {
+                //File not found what should you do?
+                System.out.println("File not found");
+              }
+              return sum;
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
