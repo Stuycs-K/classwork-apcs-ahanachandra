@@ -26,6 +26,19 @@ public class ArrayListPractice{
     
     }
 
+    public static ArrayList<String> makeReversedList( ArrayList<String> original){
+        //return a new ArrayList that is in the reversed order of the original.
+        ArrayList<String> xyz = new ArrayList<>(original.size());
+        int theSize = original.size();
+        for (int i = 0; i < theSize; i++){
+            xyz.add(i, original.get((theSize - 1) - i));
+        }
+        return xyz;
+    
+    
+    
+    }      
+
 
 
 
