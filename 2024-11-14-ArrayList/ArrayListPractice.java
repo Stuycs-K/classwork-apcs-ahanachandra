@@ -35,13 +35,34 @@ public class ArrayListPractice{
         }
         return xyz;
     
+    }
     
+    public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
+        //return a new ArrayList that has all values of a and b in alternating order that is:
+        //a[0], b[0], a[1], b[1]...
+        //If one list is longer than the other, just attach the remaining values to the end.
+        ArrayList<String> combinedList = new ArrayList<>();
+        int theSize2 = a.size();
+        int theSize3 = b.size();
+        int largestSize = 0;
+        if (theSize2 > theSize3){
+            largestSize = theSize2;
+        }
+        else{
+            largestSize = theSize3;
+        }
+        for (int i = 0; i < largestSize; i++){
+            if (i < theSize2){
+                combinedList.add(a.get(i));
+            }
+            if (i < theSize3){
+                combinedList.add(b.get(i));
+            }
+        }
+
+        return combinedList;
     
-    }      
-
-
-
-
+    }       
 
 
 }
