@@ -3,8 +3,11 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Day2 {
+    public static void main(String[] args) {
+        System.out.println(findPassword("input1.txt"));
+    }
 
-    public static int calcBlocks(String filename) {
+    public static int findPassword(String filename) {
         int currentNumber = 5;
         String overallKey = "";
         try {
