@@ -26,7 +26,24 @@ public class Fairy extends Adventurer{
         return specialmax;
     }
 
+    public String attack(Adventurer other){
+        other.applyDamage(5);
+        return "attacked " + other.getName() + " and reduced HP by 5";
+    }
 
+    public String support(Adventurer other){
+        return "supporting " + other.getName();
+    }
+
+    public String support(){
+        return "supporting " + this.getName();
+    }
+
+    public String specialAttack(Adventurer other){
+        other.applyDamage(5);
+        this.applyDamage(5);
+        return "attacked " + other.getName() + " and reduced both own and other's HP by 5";
+    }
 
 
 
